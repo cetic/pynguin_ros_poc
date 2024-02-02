@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+
+  vehicle:
+    container_name: vehicle
+    build:
+      context: ./vehicle/
+    restart: always
