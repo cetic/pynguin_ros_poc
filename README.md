@@ -20,7 +20,7 @@ In another shell session, enter the container, run the following commands to pre
 
 ```bash
 # connect to vehicle container
-docker exec -it <container_id> /bin/bash
+docker exec -it vehicle /bin/bash
 
 # activate ROS
 source /opt/ros/humble/setup.bash
@@ -30,6 +30,6 @@ export PYNGUIN_DANGER_AWARE=1
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 
-# run Pynguin on the vehicle pacakge
+# run Pynguin on the vehicle package, need to ctrl+c at the end to finish the generation.
 pynguin   --project-path /home/ros/vehicle/src/vehicle_pkg/   --output-path ./pynguin-testgen --create-coverage-report True   --module-name vehicle -v
 ```
